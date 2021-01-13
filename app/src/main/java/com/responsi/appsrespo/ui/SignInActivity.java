@@ -1,4 +1,4 @@
-package com.responsi.appsrespo;
+package com.responsi.appsrespo.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.responsi.appsrespo.R;
 import com.responsi.appsrespo.sharedpreferences.Preferencs;
 
 public class SignInActivity extends AppCompatActivity {
@@ -44,7 +45,7 @@ public class SignInActivity extends AppCompatActivity {
         findViewById(R.id.tv_Signup).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getBaseContext(),SignUpActivity.class));
+                startActivity(new Intent(getBaseContext(), SignUpActivity.class));
             }
         });
     }
@@ -53,7 +54,7 @@ public class SignInActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         if (Preferencs.getLoggedInStatus(getBaseContext())){
-            startActivity(new Intent(getBaseContext(),HomeActivity.class));
+            startActivity(new Intent(getBaseContext(), HomeActivity.class));
             finish();
         }
     }
@@ -72,7 +73,7 @@ public class SignInActivity extends AppCompatActivity {
             fokus = Email;
             cancel = true;
         }else if(!cekUser(user)){
-            Email.setError("This Username is not found");
+            Email.setError("This email is not found");
             fokus = Email;
             cancel = true;
         }

@@ -1,4 +1,4 @@
-package com.responsi.appsrespo;
+package com.responsi.appsrespo.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.responsi.appsrespo.R;
 import com.responsi.appsrespo.sharedpreferences.Preferencs;
 
 public class SignUpActivity extends AppCompatActivity {

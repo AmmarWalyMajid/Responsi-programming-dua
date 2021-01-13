@@ -1,16 +1,16 @@
-package com.responsi.appsrespo.ui.gallery;
+package com.responsi.appsrespo.ui.matakuliah;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class GalleryViewModel extends ViewModel {
+public class MakulViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public GalleryViewModel() {
+    public MakulViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
+        mText.setValue("This is matakuliah fragment");
     }
 
     public LiveData<String> getText() {
