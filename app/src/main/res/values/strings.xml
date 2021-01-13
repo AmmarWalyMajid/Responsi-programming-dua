@@ -11,4 +11,15 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="termn_all_service">termn all service</string>
+    <string name="i_agree_to_the">I agree to the </string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password">Password</string>
+    <string name="your_email_address">Your email address</string>
+    <string name="email">Email</string>
+    <string name="sign_in">Sign In</string>
+    <string name="have_an_account">Have An Account ?</string>
+    <string name="sapa">Hei there ! Nice to see you again</string>
+    <string name="amikom">AMIKOM</string>
 </resources>

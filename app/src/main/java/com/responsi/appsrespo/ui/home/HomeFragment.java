@@ -13,6 +13,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.responsi.appsrespo.R;
+import com.responsi.appsrespo.sharedpreferences.Preferencs;
 
 public class HomeFragment extends Fragment {
 
@@ -27,7 +28,7 @@ public class HomeFragment extends Fragment {
         homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
-                textView.setText(s);
+                textView.setText(Preferencs.getLoggedInUser(getContext()));
             }
         });
         return root;

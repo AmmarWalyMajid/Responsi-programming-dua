@@ -12,13 +12,13 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_Profil"
         android:name="com.responsi.appsrespo.ui.profile.ProfileFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_profil" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_makul"
         android:name="com.responsi.appsrespo.ui.matakuliah.MakulFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_makul" />

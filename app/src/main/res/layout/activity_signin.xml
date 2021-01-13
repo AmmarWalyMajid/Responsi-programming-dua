@@ -17,7 +17,7 @@
         android:id="@+id/tv_Text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="AMIKOM"
+        android:text="@string/amikom"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/img_Cloud" />
 
@@ -31,7 +31,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign In"
+            android:text="@string/sign_in"
             android:textColor="@color/black"
             android:textSize="35sp"
             android:textStyle="bold"/>
@@ -39,13 +39,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hei there ! Nice to see you again"
+            android:text="@string/sapa"
             android:textSize="16sp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email"
+            android:text="@string/email"
             android:textColor="#FA075A"
             android:textStyle="bold"
             android:textSize="20sp"
@@ -55,14 +55,14 @@
             android:id="@+id/et_emaillog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="input email"
+            android:hint="@string/your_email_address"
             android:inputType="textEmailAddress"
             android:textColor="@color/black"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Password"
+            android:text="@string/password"
             android:textColor="@color/colorredpink"
             android:textStyle="bold"
             android:textSize="20sp"
@@ -79,7 +79,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="Password"
+                android:hint="@string/password"
                 android:inputType="textPassword"
                 android:textColor="#000000" />
 
@@ -100,7 +100,7 @@
             android:id="@+id/btn_Signin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorredpink"
+            android:background="@drawable/ic_round"
             android:layout_marginTop="50dp"
             android:text="Sign in"
             android:textAllCaps="false"/>
@@ -111,7 +111,7 @@
         android:id="@+id/tv_Signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign Up"
+        android:text="@string/sign_up"
         android:layout_alignParentBottom="true"
         android:textColor="@color/colorredpink"
         android:textStyle="bold"

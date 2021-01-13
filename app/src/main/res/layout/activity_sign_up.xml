@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign Up"
+            android:text="@string/sign_up"
             android:textColor="@color/black"
             android:textSize="35sp"
             android:textStyle="bold"/>
@@ -25,7 +25,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email"
+            android:text="@string/email"
             android:textColor="#FA075A"
             android:textStyle="bold"
             android:textSize="20sp"
@@ -35,14 +35,14 @@
             android:id="@+id/et_emailUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Your email address"
+            android:hint="@string/your_email_address"
             android:inputType="textEmailAddress"
             android:textColor="@color/black"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Password"
+            android:text="@string/password"
             android:textColor="@color/colorredpink"
             android:textStyle="bold"
             android:textSize="20sp"
@@ -59,7 +59,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="Password"
+                android:hint="@string/password"
                 android:inputType="textPassword"
                 android:textColor="#000000" />
 
@@ -85,7 +85,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="Confirm Password"
+                android:hint="@string/confirm_password"
                 android:inputType="textPassword"
                 android:textColor="#000000" />
 
@@ -106,19 +106,18 @@
         <LinearLayout
             android:layout_marginTop="50dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true">
+            android:layout_height="wrap_content">
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="I agree to the  "
+                android:text="@string/i_agree_to_the"
                 android:textColor="@color/black" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="termn all service"
+                android:text="@string/termn_all_service"
                 android:textColor="@color/colorredpink"
                 android:textStyle="bold" />
 
@@ -130,9 +129,9 @@
             android:id="@+id/btn_SignUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorredpink"
+            android:background="@drawable/ic_round"
             android:layout_marginTop="50dp"
-            android:text="Sign in"
+            android:text="@string/sign_up"
             android:textAllCaps="false"/>
 
     </LinearLayout>
@@ -146,13 +145,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Have An Account ? "
+            android:text="@string/have_an_account"
             android:textColor="@color/black" />
 
         <TextView
+            android:id="@+id/tv_signin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign In"
+            android:text="@string/sign_in"
             android:textColor="@color/colorredpink"
             android:textStyle="bold" />
 

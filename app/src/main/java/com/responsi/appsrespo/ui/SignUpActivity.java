@@ -2,6 +2,7 @@ package com.responsi.appsrespo.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.KeyEvent;
@@ -27,6 +28,15 @@ public class SignUpActivity extends AppCompatActivity {
         emailup =findViewById(R.id.et_emailUp);
         passwordup =findViewById(R.id.EdPasswordUp);
         confirmpass =findViewById(R.id.et_ConPass);
+
+        final TextView sigin = findViewById(R.id.tv_signin);
+        sigin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(),SignInActivity.class);
+                startActivity(in);
+            }
+        });
 
         confirmpass.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
