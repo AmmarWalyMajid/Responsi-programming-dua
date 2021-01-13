@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInActivity">
+
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:id="@+id/img_Cloud"
+        android:layout_width="120dp"
+        android:layout_height="110dp"
+        android:src="@drawable/ic_cloud"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/tv_Text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AMIKOM"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/img_Cloud" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="50dp"
+        android:orientation="vertical"
+        android:layout_below="@id/tv_Text1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hei there ! Nice to see you again"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="#FA075A"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/et_emaillog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="input email"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="@color/colorredpink"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/EdPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColor="#000000" />
+
+            <cyd.awesome.material.AwesomeText
+                android:id="@+id/ImgShowPassword"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#ff0000"
+                android:textSize="20sp"
+                app:awesome_font="material_design"
+                app:awesome_icon="MD_VISIBILITY_OFF" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_Signin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorredpink"
+            android:layout_marginTop="50dp"
+            android:text="Sign in"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_Signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/colorredpink"
+        android:textStyle="bold"
+        android:layout_margin="16dp"
+        android:layout_alignParentRight="true"/>
+
+
+</RelativeLayout>

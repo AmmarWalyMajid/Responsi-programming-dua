@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="50dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="#FA075A"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/et_emailUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Your email address"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="@color/colorredpink"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/EdPasswordUp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColor="#000000" />
+
+            <cyd.awesome.material.AwesomeText
+                android:id="@+id/ImgShowPassword"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#ff0000"
+                android:textSize="20sp"
+                app:awesome_font="material_design"
+                app:awesome_icon="MD_VISIBILITY_OFF" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_ConPass"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:textColor="#000000" />
+
+            <cyd.awesome.material.AwesomeText
+                android:id="@+id/ImgShowPassword2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#ff0000"
+                android:textSize="20sp"
+                app:awesome_font="material_design"
+                app:awesome_icon="MD_VISIBILITY_OFF" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I agree to the  "
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="termn all service"
+                android:textColor="@color/colorredpink"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_SignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorredpink"
+            android:layout_marginTop="50dp"
+            android:text="Sign in"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Have An Account ? "
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:textColor="@color/colorredpink"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
