@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="16dp"
+    tools:context=".ui.AddMakulActivity">
+
+    <TextView
+        android:id="@+id/tv_Makul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="8dp"
+        android:text="Nama Matakuliah"
+        android:textStyle="bold"
+        android:textColor="@color/colorredpink"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/et_matakuliah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="input your matakuliah"
+        android:textColor="@color/black"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/tv_semester"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="8dp"
+        android:text="Semester"
+        android:textStyle="bold"
+        android:textColor="@color/colorredpink"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/et_semester"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="input your Semester"
+        android:textColor="@color/black"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_round"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

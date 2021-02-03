@@ -21,7 +21,7 @@ import com.responsi.appsrespo.ui.SignInActivity;
 public class ProfileFragment extends Fragment {
 
     private ProfileViewModel profileViewModel;
-    private Button logout;
+    private TextView logout;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class ProfileFragment extends Fragment {
         profileViewModel =
                 new ViewModelProvider(this).get(ProfileViewModel.class);
         View root = inflater.inflate(R.layout.fragment_profil, container, false);
-        logout =root.findViewById(R.id.btn_logout);
+        logout =root.findViewById(R.id.tv_logout);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,7 +38,7 @@ public class ProfileFragment extends Fragment {
                 startActivity(new Intent(getContext(), SignInActivity.class));
             }
         });
-        final TextView textView = root.findViewById(R.id.text_2);
+        final TextView textView = root.findViewById(R.id.profil_name);
         profileViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {

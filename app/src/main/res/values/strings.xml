@@ -9,8 +9,8 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_gallery">Profil</string>
+    <string name="menu_slideshow">Mata Kuliah</string>
     <string name="sign_up">Sign Up</string>
     <string name="termn_all_service">termn all service</string>
     <string name="i_agree_to_the">I agree to the </string>

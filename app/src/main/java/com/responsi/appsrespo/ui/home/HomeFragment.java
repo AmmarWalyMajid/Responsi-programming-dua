@@ -11,26 +11,35 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.responsi.appsrespo.R;
+import com.responsi.appsrespo.adapter.RecAdapter;
+import com.responsi.appsrespo.apps.CrudRoomApp;
+import com.responsi.appsrespo.database.Matakuliah;
 import com.responsi.appsrespo.sharedpreferences.Preferencs;
+
+import java.util.List;
 
 public class HomeFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
+    private RecAdapter adapter;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(Preferencs.getLoggedInUser(getContext()));
-            }
-        });
+        adapter = new RecAdapter();
+        RecyclerView rvMatakuliah = root.findViewById(R.id.rv_list_home);
+        rvMatakuliah.setAdapter(adapter);
+
         return root;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        List<Matakuliah> dataq = CrudRoomApp.getInstance().getDataBase().matakuliahDao().getAll();
+        adapter.setData(dataq);
     }
 }
