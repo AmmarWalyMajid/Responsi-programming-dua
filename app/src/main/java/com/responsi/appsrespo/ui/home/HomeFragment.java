@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.responsi.appsrespo.R;
 import com.responsi.appsrespo.adapter.RecAdapter;
+import com.responsi.appsrespo.adapter.RecAdapterHome;
 import com.responsi.appsrespo.apps.CrudRoomApp;
 import com.responsi.appsrespo.database.Matakuliah;
 import com.responsi.appsrespo.sharedpreferences.Preferencs;
@@ -23,13 +24,13 @@ import java.util.List;
 
 public class HomeFragment extends Fragment {
 
-    private RecAdapter adapter;
+    private RecAdapterHome adapter;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        adapter = new RecAdapter();
+        adapter = new RecAdapterHome();
         RecyclerView rvMatakuliah = root.findViewById(R.id.rv_list_home);
         rvMatakuliah.setAdapter(adapter);
 

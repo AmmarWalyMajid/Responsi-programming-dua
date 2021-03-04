@@ -1,11 +1,13 @@
 package com.responsi.appsrespo.ui.profile;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,35 +18,65 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.responsi.appsrespo.R;
 import com.responsi.appsrespo.sharedpreferences.Preferencs;
+import com.responsi.appsrespo.ui.EditActivty;
 import com.responsi.appsrespo.ui.SignInActivity;
 
-public class ProfileFragment extends Fragment {
+import de.hdodenhof.circleimageview.CircleImageView;
+
+public class ProfileFragment extends Fragment implements View.OnClickListener {
 
     private ProfileViewModel profileViewModel;
-    private TextView logout;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-
-        profileViewModel =
-                new ViewModelProvider(this).get(ProfileViewModel.class);
         View root = inflater.inflate(R.layout.fragment_profil, container, false);
-        logout =root.findViewById(R.id.tv_logout);
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+
+        CircleImageView imgCamera = root.findViewById(R.id.circleimg);
+        TextView tvUser = root.findViewById(R.id.profil_name);
+        TextView tvEmail = root.findViewById(R.id.profil_email);
+
+        Button logout = root.findViewById(R.id.prof_logout);
+        Button btnEdit = root.findViewById(R.id.prof_Edit);
+
+        btnEdit.setOnClickListener( this);
+        logout.setOnClickListener( this);
+
+
+
+//        logout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Preferencs.clearLoggedInUser(getContext());
+//                startActivity(new Intent(getContext(), SignInActivity.class));
+//            }
+//        });
+//
+//        final TextView textView = root.findViewById(R.id.profil_name);
+//        profileViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+//            @Override
+//            public void onChanged(@Nullable String s) {
+//                textView.setText(Preferencs.getLoggedInUser(getContext()));
+//            }
+//        });
+        return root;
+    }
+
+    @SuppressLint("NonConstantResourceId")
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.prof_logout:
                 Preferencs.clearLoggedInUser(getContext());
                 startActivity(new Intent(getContext(), SignInActivity.class));
-            }
-        });
-        final TextView textView = root.findViewById(R.id.profil_name);
-        profileViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(Preferencs.getLoggedInUser(getContext()));
-            }
-        });
-        return root;
+                break;
+
+            case R.id.prof_Edit:
+                startActivity(new Intent(getContext(), EditActivty.class));
+                break;
+
+
+        }
+
     }
 }

@@ -16,6 +16,53 @@ public class Matakuliah {
     @ColumnInfo(name = "semester")
     private String semester="";
 
+    @ColumnInfo(name = "nama")
+    private String nama ="";
+
+    @ColumnInfo(name = "email")
+    private String email ="";
+
+    @ColumnInfo(name = "password")
+    private String password ="";
+
+    @ColumnInfo(name = "image")
+    private String image="";
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+
+
     public int getId() {
         return id;
     }

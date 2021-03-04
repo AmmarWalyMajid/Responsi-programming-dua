@@ -1,10 +1,12 @@
-package com.responsi.appsrespo.database;
+package com.responsi.appsrespo.dao;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
+
+import com.responsi.appsrespo.database.Matakuliah;
 
 import java.util.List;
 

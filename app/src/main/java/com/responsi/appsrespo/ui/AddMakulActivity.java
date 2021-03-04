@@ -11,7 +11,7 @@ import android.widget.Toast;
 import com.responsi.appsrespo.R;
 import com.responsi.appsrespo.apps.CrudRoomApp;
 import com.responsi.appsrespo.database.Matakuliah;
-import com.responsi.appsrespo.database.MatakuliahDao;
+import com.responsi.appsrespo.dao.MatakuliahDao;
 
 public class AddMakulActivity extends AppCompatActivity implements View.OnClickListener {
 
